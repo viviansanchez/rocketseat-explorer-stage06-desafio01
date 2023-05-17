@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-links-fc: #c4c4cc;
+  --nav-links-fc-hover: #ffffff;
+
+  --home-header-fc: #e1e1e6;
+  --home-button-border-c: #ffffff;
+  --home-button-fc: #ffffff;
+  --home-button-border-c-hover: #ffffff;
+  --home-button-border-fc-hover: #02799d;
+
+  --general-pages-fc: #e1e1e6;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  /* background-image: url(./assets/home-bg.png); */
+  background-size: cover;
+}
+
+.home-bg {
+  background-image: url(./assets/home-bg.png);
+}
+
+.the-universe-bg {
+  background-image: url(./assets/the-universe-bg.png);
+}
+
+.exploration-bg {
+  background-image: url(./assets/exploration-bg.png);
+}
+
+header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0 2.5rem 4.5rem;
+}
+
+header img {
+  width: 3.125rem;
+  height: 2.625rem;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 1.375rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: var(--nav-links-fc);
+  transition: all 0.5s;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: var(--nav-links-fc-hover);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header nav a.active-link {
+  color: var(--nav-links-fc-hover);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* home page styling */
+#home-container {
+  text-align: center;
+  margin-top: 10.75rem;
+
+  animation: appear 1s;
+}
+
+#home-container h1 {
+  color: var(--home-header-fc);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+#home-container a {
+  background: none;
+  border: 2px solid var(--home-button-border-c);
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+
+  font-family: "Roboto", sans-serif;
+  color: var(--home-button-fc);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+#home-container a:hover {
+  background: var(--home-button-border-c-hover);
+  color: var(--home-button-border-fc-hover);
+}
+
+/* the-universe and exploration pages styling */
+.container {
+  color: var(--general-pages-fc);
+  margin: 4rem 0 0 6.375rem;
+  max-width: 40.5rem;
+
+  animation: fromleft 1s;
+}
+
+.container h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+}
+
+@keyframes fromleft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* essa keyframe para os containers das paginas normais */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
