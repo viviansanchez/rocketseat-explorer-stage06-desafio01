@@ -143,7 +143,6 @@ header nav a.active-link {
     opacity: 1;
   }
 }
-/* essa keyframe para os containers das paginas normais */
 
 @keyframes appear {
   from {
